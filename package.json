@@ -1,29 +1,29 @@
 {
   "name": "react-native-nested-listview-examples-expo",
-  "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "version": "1.0.1",
+  "main": "index.ts",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "expo": "~46.0.13",
-    "expo-status-bar": "~1.4.0",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-native": "0.69.6",
-    "react-native-nested-listview": "^0.14.1",
-    "react-native-web": "~0.18.7",
-    "react-redux": "^8.0.4",
-    "@reduxjs/toolkit": "^1.8.5"
+    "@expo/vector-icons": "^15.0.2",
+    "@reduxjs/toolkit": "^2.11.0",
+    "expo": "~57.0.25",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-nested-listview": "0.15.0",
+    "react-native-web": "^0.21.2",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@types/react": "~18.0.14",
-    "@types/react-native": "~0.69.1",
-    "typescript": "~4.3.5"
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
   },
   "private": true
 }
