@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import IconFeather from 'react-native-vector-icons/Feather';
-import IconFontisto from 'react-native-vector-icons/Fontisto';
-import IconFontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import IconEvilIcons from 'react-native-vector-icons/EvilIcons';
+import IconFeather from '@expo/vector-icons/Feather';
+import IconFontisto from '@expo/vector-icons/Fontisto';
+import IconFontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import IconEvilIcons from '@expo/vector-icons/EvilIcons';
 import categories from './categories.json';
 
 import NestedListView, { INode, NestedRow } from 'react-native-nested-listview';
