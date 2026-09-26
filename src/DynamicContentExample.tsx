@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import NestedListView, { INode } from 'react-native-nested-listview';
+import NestedListView, { INode, IRenderedNode } from 'react-native-nested-listview';
 
 const data = [
   {
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
 const DynamicContentExample = () => {
   const [dataSource, setDataSource] = useState('data');
 
-  const renderNode = (node: INode, level?: number) => {
+  const renderNode = (node: IRenderedNode, level?: number) => {
     const paddingLeft = (level ?? 0 + 1) * 30;
 
     return (

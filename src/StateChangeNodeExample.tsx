@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import NestedListView, { INode } from 'react-native-nested-listview';
+import NestedListView, { INode, IRenderedNode } from 'react-native-nested-listview';
 
 const generateXNumItems = (numItems: number, prefix: string) => {
   const items = [];
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
 });
 
 const StateChangeNodeExample = () => {
-  const renderNode = (node: INode, level?: number) => {
+  const renderNode = (node: IRenderedNode, level?: number) => {
     const paddingLeft = (level ?? 0 + 1) * 30;
 
     return (

@@ -6,7 +6,7 @@ import IconFontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import IconEvilIcons from '@expo/vector-icons/EvilIcons';
 import categories from './categories.json';
 
-import NestedListView, { INode, NestedRow } from 'react-native-nested-listview';
+import NestedListView, { INode, IRenderedNode, NestedRow } from 'react-native-nested-listview';
 
 const styles = StyleSheet.create({
   safeArea: {
@@ -56,7 +56,7 @@ const PerformanceExample = () => {
         getChildrenName={() => 'items'}
         data={data.side_panel_nested_categories}
         onNodePressed={() => {}}
-        renderNode={(node: INode, level?: number) => {
+        renderNode={(node: IRenderedNode, level?: number) => {
           let iconByType = (
             <IconFeather name="menu" size={22} color={'indigo'} />
           );

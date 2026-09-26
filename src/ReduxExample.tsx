@@ -1,7 +1,8 @@
 import React from 'react';
 import { Alert, StyleSheet, Text, View } from 'react-native';
-import NestedListView, { INode } from 'react-native-nested-listview';
+import NestedListView, { INode, IRenderedNode } from 'react-native-nested-listview';
 import { useSelector } from 'react-redux';
+import type { RootState } from './store';
 
 const colorLevels: { [key: string]: any } = {
   0: 'white',
@@ -21,9 +22,9 @@ const styles = StyleSheet.create({
 });
 
 const CustomNodeExample = () => {
-  const products = useSelector<any>((state) => state.products.products);
+  const products = useSelector((state: RootState) => state.products.products);
 
-  const renderNode = (node: INode, level?: number) => {
+  const renderNode = (node: IRenderedNode, level?: number) => {
     const paddingLeft = (level || 0 + 1) * 30;
     const backgroundColor = colorLevels[level || 0] || 'white';
 
@@ -36,8 +37,8 @@ const CustomNodeExample = () => {
     );
   };
 
-  const onNodePressed = (node?: INode) => {
-    Alert.alert(node?.name);
+  const onNodePressed = (node: IRenderedNode) => {
+    Alert.alert(node.name);
   };
 
   const getChildrenName = () => {
