@@ -6,6 +6,7 @@ import CustomNodeExample from "./src/CustomNodeExample";
 import DynamicContentExample from "./src/DynamicContentExample";
 import ErrorMessageExample from "./src/ErrorMessageExample";
 import ExtraDataExample from "./src/ExtraDataExample";
+import ListPropsExample from "./src/ListPropsExample";
 import NestedRowExample from "./src/NestedRowExample";
 import PerformanceExample from "./src/PerformanceExample";
 import ReduxExample from "./src/ReduxExample";
@@ -22,6 +23,7 @@ const mapScreenComp: any = {
   DynamicContentExample: () => <DynamicContentExample />,
   ChildrenAsObjectExample: () => <ChildrenAsObjectExample />,
   PerformanceExample: () => <PerformanceExample />,
+  ListPropsExample: () => <ListPropsExample />,
   ReduxExample: () => <ReduxExample />,
 };
 

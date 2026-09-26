@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import NestedListView, { INode, NestedRow } from 'react-native-nested-listview';
+import NestedListView, { INode, IRenderedNode, NestedRow } from 'react-native-nested-listview';
 
 const generateXNumItems = (numItems: number, prefix: string) => {
   const items = [];
@@ -63,7 +63,7 @@ const NestedRowExample = () => {
       <NestedListView
         data={data}
         getChildrenName={getChildrenName}
-        renderNode={(node: INode, level?: number) => (
+        renderNode={(node: IRenderedNode, level?: number) => (
           <NestedRow
             level={level}
             paddingLeftIncrement={20}

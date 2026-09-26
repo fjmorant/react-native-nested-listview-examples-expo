@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import NestedListView, { INode } from 'react-native-nested-listview';
+import NestedListView, { INode, IRenderedNode } from 'react-native-nested-listview';
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: 'rgb(255, 255, 255)', padding: 15 },
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 });
 
 const ErrorMessageExample = () => {
-  const renderNode = (node: INode, level?: number) => {
+  const renderNode = (node: IRenderedNode, level?: number) => {
     const paddingLeft = (level ?? 0 + 1) * 30;
 
     return (

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import NestedListView, { INode } from 'react-native-nested-listview';
+import NestedListView, { INode, IRenderedNode } from 'react-native-nested-listview';
 
 const data = [
   {
@@ -72,7 +72,7 @@ const ExtraDataExample = () => {
         data={data}
         extraData={selected}
         getChildrenName={getChildrenName}
-        renderNode={(node: INode, level?: number) => (
+        renderNode={(node: IRenderedNode, level?: number) => (
           <>
             <Text>{node.name}</Text>
             <TouchableOpacity onPress={() => toggleChecked(node)}>
